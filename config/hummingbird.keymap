@@ -29,7 +29,7 @@
         combo_backslash {
             timeout-ms = <50>;
             key-positions = <20 21>;
-            bindings = <&kp BACKSLASH>;
+            bindings = <&kp NON_US_BACKSLASH>;
         };
         combo_v {
             timeout-ms = <50>;
@@ -58,9 +58,9 @@
             //  Q          W          E           R               T            Y                U              I           O          P
                 &kp Q      &kp W      &kp E       &kp R           &kp T        &kp Y            &kp U          &kp I       &kp O      &kp P
             //  A          S          D           F               G            H                J              K           L          ; (shift :)
-                &kp A      &kp S      &kp D       &kp F           &kp G        &kp H            &kp J          &kp K       &kp L      &kp SQT
-            //             X          C           V                                             M              ,          .
-                           &kp X      &kp C       &kp V                                         &kp M          &kp COMMA  &kp DOT
+                &kp A      &kp S      &kp D       &kp F           &kp G        &kp H            &kp J          &kp K       &kp L      &kp SEMI
+            //             Z          X           C                                             M              ,          .
+                           &kp Z      &kp X       &kp C                                         &kp M          &kp COMMA  &kp DOT
             //                                    alt       space           alt_gr    space
                                                   &kp LALT  &kp SPACE       &kp RALT  &kp SPACE
             >;
