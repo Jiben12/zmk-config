@@ -61,8 +61,8 @@
                 &kp A      &kp S      &kp D       &kp F           &kp G        &kp H            &kp J          &kp K       &kp L      &kp SEMI
             //             Z          X           C                                             M              ,          .
                            &kp Z      &kp X       &kp C                                         &kp M          &kp COMMA  &kp DOT
-            //                                    alt       space           alt_gr    space
-                                                  &kp LALT  &kp SPACE       &kp RALT  &kp SPACE
+            //                                    alt       space           space    alg_gr
+                                                  &kp LALT  &kp SPACE       &kp SPACE  &kp RALT
             >;
         };
 
