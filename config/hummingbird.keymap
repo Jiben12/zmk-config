@@ -11,11 +11,8 @@
 #define DEF_L 0
 #define NAV_L 1
 #define SYM_L 2
-#define NUM_L 3
-#define MISC_L 4
-#define DEAD_L 5
-#define DEAD_UP_L 6
-#define GAME_L 7
+#define DEAD_L 3
+#define DEAD_UP_L 4
 
 #define COMPOSE_KEY RALT
 
@@ -357,20 +354,20 @@
 
         default_layer {
             bindings = <
-                &kp Q       &kp C      &kp O      &kp P          &kp F            &kp J         &kp M       &kp D      &dead_key  &kp Y
+                &kp Q       &kp C      &kp O      &kp P          &kp W            &kp J         &kp M       &kp D      &dead_key  &kp Y
                 &hm LSHFT A &hm LGUI S &hm LALT E &hm LCTRL N    &kp B            &kp L         &hm RCTRL R &hm LALT T &hm RGUI I &hm RSHFT U
                             &kp X      &minus_qm  &kp V                                         &kp H       &kp G      &com_scol
-                                              &hp LSHFT BSPC     &lt NAV_L SPACE  &lt SYM_L ESC &mo NUM_L
+                                              &hp LSHFT BSPC     &lt NAV_L SPACE  &lt SYM_L RET &lt NAV_L SPACE
             >;
         };
 
         nav_layer {
             display-name = "Nav";
             bindings = <
-                &kp TAB        &kp HOME      &kp END       &kp LS(TAB)   &sw N6        &none          &none          &none         &none          &kp DELETE
-                &swm LSHFT N1  &swm LGUI N2  &swm LALT N3  &swm LCTRL N4 &sw N5        &none          &hm RCTRL DOWN &hm LALT UP   &hm RGUI RIGHT &kp RSHFT
-                               &kp LC(X)     &kp LC(C)     &kp LC(V)                                  &kp LEFT       &none         &none
-                                                           &hp LSHFT LC(BSPC) &trans   &lt MISC_L RET &kp LS(RET)
+                &kp TAB        &kp HOME      &kp UP       &kp END   &sw PG_UP        &none          &kp N7 &kp N8   &kp N9 &none
+                &kp ESC        &kp LEFT      &kp DOWN     &kp RIGHT &sw PG_DN        &none          &kp N4 &kp N5   &kp N6 &kp N0
+                               &kp C_VOL_DN  &kp C_MUTE   &kp C_VOL_UP                              &kp N3 &kp N2   &kp N1
+                                                          &kp DEL &kp SPACE   &kp RET &kp LS(RET)
             >;
         };
 
@@ -381,26 +378,6 @@
                 &hm LSHFT LBRC  &hm LGUI LPAR  &hm LALT RPAR  &hm LCTRL RBRC  &kp EQUAL        &kp BACKSLASH &hm LCTRL PLUS  &hm LALT MINUS  &hm LGUI SLASH  &hm LSHFT SINGLE_QUOTE
                                 &kp LBKT       &kp RBKT       &kp TILDE                                      &kp TILDE       &kp LESS_THAN   &kp GREATER_THAN
                                                            &hp LSHFT LC(BSPC) &lt MISC_L SPACE &trans        &trans
-            >;
-        };
-
-        num_layer {
-            display-name = "Num";
-            bindings = <
-                &none        &none       &none       &none        &none           &none         &kp N7       &kp N8      &kp N9      &kp DELETE
-                &hm LSHFT N1 &hm LGUI N2 &hm LALT N3 &hm LCTRL N4 &none           &none         &hm LCTRL N4 &hm LALT N5 &hm LGUI N6 &hm LSHFT N0
-                             &none       &none       &none                                      &kp N1       &kp N2      &kp N3
-                                                     &hp LSHFT BSPC &trans        &trans        &trans
-            >;
-        };
-
-        misc_layer {
-            display-name = "Misc";
-            bindings = <
-                &kp LCTRL   &none      &none        &kp C_PP       &kp C_NEXT       &kp C_PREV    &none          &msc SCRL_DOWN &msc SCRL_LEFT &msc SCRL_RIGHT
-                &kp LSHFT   &mkp RCLK  &mkp MCLK    &mkp LCLK      &kp C_NEXT       &kp C_PREV    &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT &msc SCRL_UP
-                            &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP                                  &mmv MOVE_LEFT &kp C_BRI_DN  &kp C_BRI_UP
-                                                    &trans         &trans           &trans        &trans
             >;
         };
 
@@ -421,16 +398,6 @@
                 &cmp_gq_u A  &cmp_sq_u E &cmp_gq_u E &cmp_car_u E   &none            &kp LPAR      &kp RPAR       &cmp_car_u I  &cmp_i_trem_u  &cmp_gq_u U
                              &none      &none        &none                                         &cmp_sus_pt    &none         &cmp_med_pt
                                                      &to DEF_L      &kp SPACE        &to DEF_L     &to DEF_L
-            >;
-        };
-
-        gaming_layer {
-            display-name = "game";
-            bindings = <
-                &kp LCTRL  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I     &kp O
-                &kp LSHIFT &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K     &kp L
-                           &kp X  &kp C  &kp V                &kp M  &kp COLON &kp DOT
-                                  &kp LALT  &kp SPACE  &kp ENTER  &kp ESCAPE
             >;
         };
     };
