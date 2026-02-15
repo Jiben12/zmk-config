@@ -347,7 +347,7 @@
                 &kp GRAVE       &kp AT_SIGN    &kp HASH       &kp DOLLAR      &kp PERCENT      &kp CARET     &kp AMPERSAND   &kp ASTERISK    &kp PIPE        &kp DOUBLE_QUOTES
                 &hm LSHFT LBRC  &hm LGUI LPAR  &hm LALT RPAR  &hm LCTRL RBRC  &kp EQUAL        &kp BACKSLASH &hm LCTRL PLUS  &hm LALT MINUS  &hm LGUI SLASH  &hm LSHFT SINGLE_QUOTE
                                 &kp LBKT       &kp RBKT       &kp TILDE                                      &kp TILDE       &kp LESS_THAN   &kp GREATER_THAN
-                                                           &hp LSHFT LC(BSPC) &lt MISC_L SPACE &trans        &trans
+                                                           &trans  &trans  &trans      &trans
             >;
         };
 
