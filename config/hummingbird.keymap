@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEF_L 0
-#define NAV_L 1
+#define MISC_L 1
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick-tap-ms = <200>; };
@@ -62,7 +62,16 @@
             //             Z          X           C                                             M              ,          .
                            &kp Z      &kp X       &kp C                                         &kp M          &kp COMMA  &kp DOT
             //                                    alt       space           space    alg_gr
-                                                  &kp LALT  &kp SPACE       &kp SPACE  &kp RALT
+                                                  &kp LALT  &lt MISC_L SPACE       &kp SPACE  &kp RALT
+            >;
+        };
+        misc_layer {
+            display-name = "Misc";
+            bindings = <
+                &kp C_BRI_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &msc SCRL_UP       &kp F1            &kp F7 &kp F8  &kp F9 &kp F11
+                &kp C_BRI_DN   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN     &kp PRINTSCREEN   &kp F4 &kp F5  &kp F6 &kp F10
+                            &mkp RCLK  &mkp MCLK   &mkp LCLK                                                 &kp F1 &kp F2  &kp F3
+                                                      &trans          &trans           &trans        &trans
             >;
         };
 
